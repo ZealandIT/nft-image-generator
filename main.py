@@ -1,5 +1,4 @@
 from PIL import Image 
-from IPython.display import display 
 import random
 import json
 
@@ -7,49 +6,50 @@ import json
 # Each image is made up a series of traits
 # The weightings for each trait drive the rarity and add up to 100%
 
-background = ["Blue", "Cyan", "Green", "Pink", "Purple"]
-background_file_names = ["bg blue","bg cyan","bg green","bg pink","bg purple"]
-background_weights = [30, 40, 15, 10, 5]
+background = ["Blue", "Cyan", "Green", "Pink", "Purple", "Solana"]
+background_file_names = ["bg blue","bg cyan","bg green","bg pink","bg purple", "bg solana"]
+background_weights = [0.25, 0.35, 0.18, 0.197, 0.02,0.003]
 
 base = ["Black caramel", "Blonde", "Cyborg", "Delta", "Gamma","Regular", "Steampunk"]
 base_file_names = ["black caramel","blonde","cyborg","delta","gamma","regular","steampunk"]
-base_weights = [20,22,5,5,5,35,8]
+base_weights = [0.12,0.17,0.1,0.095,0.005,0.3,0.1]
 
 eyes = ["Blue","Brown","Pink","Purple","Yellow","Laser","Crosshair","Robot","Terminator"] 
 eyes_file_names = ["regular blue","regular brown","regular pink","regular purple","regular yellow","laser eyes","crosshair","robot","terminator"]
-eyes_weights = [15,13,7,10,10,3,5,5,3]
+eyes_weights = [0.4,0.3,0.025,0.05,0.05,0.025,0.11,0.02,0.02]
 
 mouth = ["Default","Blunt","Grills","Grin","Metal growl","Growl","Muzzle","Metal open","Open","Tongue"]
 mouth_file_names = ["default","blunt","grills","grinning","growl metal teeth","growl","muzzled","open mouth metal","open mouth","tongue out"]
-mouth_weights = [40,3,6,9,4,6,6,4,6,10]
+mouth_weights = [0.35,0.0625,0.0625,0.1125,0.0625,0.0825,0.0625,0.0925,0.1125,0.0625]
 
 eyewear = ["None","Deal with it","Goggles","Monocle","Nerd","Nightvision","Ovals","Pit vipers","Soldoge","Startrek"]
 eyewear_file_names = ["none","deal with it","goggles","monocle","nerdy glasses","night vision","oval glasses","pit vipers","soldoge glasses","star trek"]
-eyewear_weights = [33,8,6,6,4,6,6,3,6,6]
+eyewear_weights = [0.3, 0.07,0.1,0.15,0.15,0.02,0.075,0.075,0.03,0.03]
 
 hair = ["None","Afro","Liberty black","Liberty blue","Liberty green","Liberty pink","Liberty purple","Liberty white","Matrix dreads","Mohawk 1 black","Mohawk 1 blue","Mohawk 1 green","Mohawk 1 pink","Mohawk 1 purple","Mohawk 1 white","Mohawk 2 black", "Mohawk 2 blue", "Mohawk 2 green", "Mohawk 2 pink", "Mohawk 2 purple", "Mohawk 2 white"]
 hair_file_names = ["none","afro","liberty spike black","liberty spike blue","liberty spike green","liberty spike pink","liberty spike purple","liberty spike white","matrix dreads","mohawk 1 black","mohawk 1 blue","mohawk 1 green","mohawk 1 pink","mohawk 1 purple","mohawk 1 white", "mohawk 2 black", "mohawk 2 blue", "mohawk 2 green", "mohawk 2 pink", "mohawk 2 purple", "mohawk 2 white"]
-hair_weights = [30,3,13,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
+hair_weights = [0.33,0.0004995,0.09,0.09,0.09,0.09,0.09,0.09,0.0095005,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01]
 
 clothes = ["None","Astronaut","Camo","Armor","Leather spikes","Solana tank","Tron"]
 clothes_file_names = ["none","astronaut","camou","futuristic armor","futuristic leather jacket","solana tank top","tron"]
-clothes_weights = [60,7,10,10,5,5,3]
+clothes_weights = [0.5,0.05,0.07,0.08,0.11,0.09,0.1]
 
 collar = ["None","Chain","Bow-tie black","Bow-tie blue","Bow-tie green","Bow-tie pink","Bow-tie purple","Bow-tie white","Heart","Mr T","SolDoge","Piano tie","Solana tie","Black tie","Blue tie","Green tie","Pink tie","Purple tie","White tie","Spikes"]
 collar_file_names = ["none","big chain","bow tie black","bow tie blue","bow tie green","bow tie pink","bow tie purple","bow tie white","heart","mr t","normal","piano tie","short solana tie","short tie black","short tie blue","short tie green","short tie pink","short tie purple","short tie white","spikes"]
-collar_weights = [20,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]
+collar_weights = [0.2,0.075,0.075,0.075,0.075,0.03,0.075,0.075,0.075,0.075,0.005,0.01,0.005,0.009,0.009,0.009,0.009,0.009,0.005,0.1]
 
 backpack = ["None","Gun","Jetpack","Rocket","SolDoge backpack"]
 backpack_file_names = ["none","futuristic gun","jetpack","rocket","soldoge backpack"]
-backpack_weights = [70,15,5,8,3]
+backpack_weights = [0.75,0.10,0.05,0.09,0.06]
 
-headwear = ["None","Astronaut","FTX hat","Cowboy","Jason X","Kitty","Predator","Radar dish","SolDoge","Solana","Steampunk","Tin foil","Top hat","TV"]
-headwear_file_names = ["none","astronaut helmet","ftx hat","howboy hat","jason x mask","kitty hat","predator mask","radar dish hat","sdoge hat","solana hat","steampunk hat","tin foil hat","top hat","tv head"]
-headwear_weights = [50,4,4,4,4,4,4,4,4,4,4,4,4,4]
+headwear = ["None","Astronaut","FTX hat","Cowboy","Jason X","Kitty","Predator","Radar dish","SolDoge","Solana","Steampunk","Tin foil","Top hat","TV","Solana earphones","Cone of shame","SDoge helmet","Wizard"]
+headwear_file_names = ["none","astronaut helmet","ftx hat","howboy hat","jason x mask","kitty hat","predator mask","radar dish hat","sdoge hat","solana hat","steampunk hat","tin foil hat","top hat","tv head","big earphones","cone of shame","sdoge army helmet","wizard hat"]
+headwear_weights = [0.33,0.0009995,0.045,0.09,0.09,0.09,0.09,0.09,0.0095005,0.01,0.01,0.01,0.01,0.01,0.085,0.01,0.01,0.01]
+headwear_weights_subset = [0.33,0,0.045,0.09,0,0.09,0,0.09,0.0095005,0.01,0.01,0.01,0.01,0,0.085,0.01,0.01,0.01]
 
 ## Generate Traits
 
-TOTAL_IMAGES = 30 # Number of random unique images we want to generate
+TOTAL_IMAGES = 1000 # Number of random unique images we want to generate
 
 all_images = [] 
 
@@ -64,17 +64,37 @@ def create_new_image():
     new_image ["Base"] = random.choices(base, base_weights)[0]
     new_image ["Eyes"] = random.choices(eyes, eyes_weights)[0]
     new_image ["Mouth"] = random.choices(mouth, mouth_weights)[0]
-    new_image ["EyeWear"] = random.choices(eyewear, eyewear_weights)[0]
-    new_image ["Hair"] = random.choices(hair, hair_weights)[0]
+
+    if new_image["Mouth"]=="Muzzle":
+        new_image["EyeWear"] = "None"
+    else:
+        new_image ["EyeWear"] = random.choices(eyewear, eyewear_weights)[0]
+
+    if new_image["Base"] in ("Cyborg","Steampunk"):
+        new_image["Hair"] = "None"
+    else:
+        new_image ["Hair"] = random.choices(hair, hair_weights)[0]
+
     new_image ["Clothes"] = random.choices(clothes, clothes_weights)[0]
     new_image ["Collar"] = random.choices(collar, collar_weights)[0]
-    new_image ["Backpack"] = random.choices(backpack, background_weights)[0]
-    new_image ["Headwear"] = random.choices(headwear, headwear_weights)[0]
+    new_image ["Backpack"] = random.choices(backpack, backpack_weights)[0]
+    if new_image["Mouth"] in ("Blunt","Tongue") or new_image["EyeWear"]!="None" or new_image["Eyes"]=="Laser":
+        new_image["Headwear"] = random.choices(headwear, headwear_weights_subset)[0]
+    else:
+        new_image["Headwear"] = random.choices(headwear, headwear_weights)[0]
 
-    if new_image["Hair"] not in ("None","Matrix dreads") or new_image["Eyes"]=="Laser":
+    if new_image["Hair"] not in ("None","Matrix dreads"):
         # can't have headwear
         new_image ["Headwear"] = "None"
 
+    if new_image["Eyes"]=="Laser":
+        # can't have eyewear
+        new_image ["EyeWear"] = "None"
+
+    if new_image["Headwear"]=="Astronaut":
+        # can't have collar or hair
+        new_image["Collar"] = "None"
+        new_image["Hair"] = "None"
     
     if new_image in all_images:
         return create_new_image()
@@ -99,7 +119,7 @@ all_unique = all_images_unique(all_images)
 print("Are all images unique?", all_unique)
 
 if not all_unique:
-    print("Not all images are unique.")
+    print("Error: Not all images are unique.")
     exit(1)
 
 
@@ -179,6 +199,38 @@ print(collar_count)
 print(backpack_count)
 print(headwear_count)
 
+print("Background:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in background_count.items()])
+
+print("Base:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in base_count.items()])
+
+print("Eyes:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in eyes_count.items()])
+
+print("Mouth:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in mouth_count.items()])
+
+print("Eye wear:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in eyewear_count.items()])
+
+print("Hair:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in hair_count.items()])
+
+print("Clothes")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in clothes_count.items()])
+
+print("Collar:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in collar_count.items()])
+
+print("Backpack:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in backpack_count.items()])
+
+print("Head wear:")
+print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in headwear_count.items()])
+
+
+
 
 #### Generate Metadata for all Traits 
 METADATA_FILE_NAME = './metadata/all-traits.json'; 
@@ -213,21 +265,22 @@ for item in all_images:
     if item["Collar"]!="None":
         collar_img = Image.open(f'./trait-layers/collar/{collar_file_names[collar.index(item["Collar"])]}.png').convert('RGBA')
 
+    if item["Headwear"]!="None":
+        if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard"):
+            headwear_fg_img = Image.open(f'./trait-layers/headwear foreground/{headwear_file_names[headwear.index(item["Headwear"])]}.png').convert('RGBA')
+            headwear_bg_img = Image.open(f'./trait-layers/headwear background/{headwear_file_names[headwear.index(item["Headwear"])]}.png').convert('RGBA')
+        else:
+            headwear_img = Image.open(f'./trait-layers/headwear/{headwear_file_names[headwear.index(item["Headwear"])]}.png').convert('RGBA')
+
     if item["Backpack"]!="None":
         backpack_img = Image.open(f'./trait-layers/backpack/{backpack_file_names[backpack.index(item["Backpack"])]}.png').convert('RGBA')
-
-    if item["Headwear"]!="None":
-        headwear_img = Image.open(f'./trait-layers/headwear/{headwear_file_names[headwear.index(item["Headwear"])]}.png').convert('RGBA')
+      
 
     #Create each composite
     com1 = Image.alpha_composite(bg, base_img)
-    com1 = Image.alpha_composite(com1, eyes_img)
-
-    if item["Mouth"]!="Default":
-        com1 = Image.alpha_composite(com1, mouth_img)
-    
-    if item["EyeWear"]!="None":
-        com1 = Image.alpha_composite(com1, eyewear_img)
+   
+    if item["Backpack"]!="None":
+        com1 = Image.alpha_composite(com1, backpack_img)
 
     if item["Hair"]!="None":
         com1 = Image.alpha_composite(com1, hair_img)
@@ -238,11 +291,26 @@ for item in all_images:
     if item["Collar"]!="None":
         com1 = Image.alpha_composite(com1, collar_img)
 
-    if item["Backpack"]!="None":
-        com1 = Image.alpha_composite(com1, backpack_img)
+    if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard"):
+        com1 = Image.alpha_composite(com1, headwear_bg_img)
+
+    if item["Eyes"]!="Laser":
+        com1 = Image.alpha_composite(com1, eyes_img)
+
+    if item["Mouth"]!="Default":
+        com1 = Image.alpha_composite(com1, mouth_img)
+
+    if item["EyeWear"]!="None":
+        com1 = Image.alpha_composite(com1, eyewear_img)
+
+    if item["Eyes"]=="Laser":
+        com1 = Image.alpha_composite(com1, eyes_img)
 
     if item["Headwear"]!="None":
-        com1 = Image.alpha_composite(com1, headwear_img)
+        if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard"):
+            com1 = Image.alpha_composite(com1, headwear_fg_img)
+        else:
+            com1 = Image.alpha_composite(com1, headwear_img)
 
     #Convert to RGB
     rgb_im = com1.convert('RGB')
@@ -257,7 +325,7 @@ data = json.load(f)
 
 
 IMAGES_BASE_URI = "ADD_IMAGES_BASE_URI_HERE"
-PROJECT_NAME = "ADD_PROJECT_NAME_HERE"
+PROJECT_NAME = "SolDoge"
 
 def getAttribute(key, value):
     return {
