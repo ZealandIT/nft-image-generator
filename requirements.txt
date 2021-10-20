@@ -1,3 +1,4 @@
 pillow
 IPython
-nympy
+numpy
+pygments
