@@ -26,17 +26,17 @@ eyes = ["Blue","Brown","Pink","Purple","Yellow","Laser","Crosshair","Robot","Ter
 eyes_file_names = ["regular blue","regular brown","regular pink","regular purple","regular yellow","laser eyes","crosshair","robot","terminator"]
 eyes_weights = [0.4,0.3,0.025,0.05,0.05,0.025,0.11,0.02,0.02]
 
-mouth = ["Default","Blunt","Grills","Grin","Metal growl","Growl","Muzzle","Metal open","Open","Tongue"]
-mouth_file_names = ["default","blunt","grills","grinning","growl metal teeth","growl","muzzled","open mouth metal","open mouth","tongue out"]
-mouth_weights = [0.35,0.0625,0.0625,0.1125,0.0625,0.0825,0.0625,0.0925,0.1125,0.0625]
+mouth = ["Default","Blunt","Grills","Grin","Metal growl","Growl","Muzzle","Metal open","Open","Tongue", "Growl Gold"]
+mouth_file_names = ["default","blunt","grills","grinning","growl metal teeth","growl","muzzled","open mouth metal","open mouth","tongue out", "growl gold teeth"]
+mouth_weights = [0.343,0.0625,0.0625,0.1125,0.0625,0.0825,0.0625,0.0925,0.1125,0.0625,0.007]
 
 eyewear = ["None","Deal with it","Goggles","Monocle","Nerd","Nightvision","Ovals","Pit vipers","Soldoge","Startrek"]
 eyewear_file_names = ["none","deal with it","goggles","monocle","nerdy glasses","night vision","oval glasses","pit vipers","soldoge glasses","star trek"]
 eyewear_weights = [0.3, 0.07,0.1,0.15,0.15,0.02,0.075,0.075,0.03,0.03]
 
-hair = ["None","Afro","Liberty black","Liberty blue","Liberty green","Liberty pink","Liberty purple","Liberty white","Matrix dreads","Mohawk 1 black","Mohawk 1 blue","Mohawk 1 green","Mohawk 1 pink","Mohawk 1 purple","Mohawk 1 white","Mohawk 2 black", "Mohawk 2 blue", "Mohawk 2 green", "Mohawk 2 pink", "Mohawk 2 purple", "Mohawk 2 white"]
-hair_file_names = ["none","afro","liberty spike black","liberty spike blue","liberty spike green","liberty spike pink","liberty spike purple","liberty spike white","matrix dreads","mohawk 1 black","mohawk 1 blue","mohawk 1 green","mohawk 1 pink","mohawk 1 purple","mohawk 1 white", "mohawk 2 black", "mohawk 2 blue", "mohawk 2 green", "mohawk 2 pink", "mohawk 2 purple", "mohawk 2 white"]
-hair_weights = [0.33,0.0004995,0.09,0.09,0.09,0.09,0.09,0.09,0.0095005,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01]
+hair = ["None","Mohawk 2 Solana","Mohawk 2 yellow","Mohawk 1 Solana","Mohawk 1 yellow","Dreads Solana","Afro","Liberty yellow","Liberty Solana","Liberty black","Liberty blue","Liberty green","Liberty pink","Liberty purple","Liberty white","Matrix dreads","Mohawk 1 black","Mohawk 1 blue","Mohawk 1 green","Mohawk 1 pink","Mohawk 1 purple","Mohawk 1 white","Mohawk 2 black", "Mohawk 2 blue", "Mohawk 2 green", "Mohawk 2 pink", "Mohawk 2 purple", "Mohawk 2 white"]
+hair_file_names = ["none","mohawk 2 solana","mohawk 2 yellow","mohawk 1 solana","mohawk 1 yellow","matrix dreads solana","afro","liberty spike yellow","liberty spike solana","liberty spike black","liberty spike blue","liberty spike green","liberty spike pink","liberty spike purple","liberty spike white","matrix dreads","mohawk 1 black","mohawk 1 blue","mohawk 1 green","mohawk 1 pink","mohawk 1 purple","mohawk 1 white", "mohawk 2 black", "mohawk 2 blue", "mohawk 2 green", "mohawk 2 pink", "mohawk 2 purple", "mohawk 2 white"]
+hair_weights = [0.31,0.0022,0.0025,0.003,0.005,0.002,0.0004995,0.007,0.003,0.09,0.09,0.09,0.09,0.09,0.09,0.0095005,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01]
 
 clothes = ["None","Astronaut","Camo","Armor","Leather spikes","Solana tank","Tron"]
 clothes_file_names = ["none","astronaut","camou","futuristic armor","futuristic leather jacket","solana tank top","tron"]
@@ -46,14 +46,14 @@ collar = ["None","Chain","Bow-tie black","Bow-tie blue","Bow-tie green","Bow-tie
 collar_file_names = ["none","big chain","bow tie black","bow tie blue","bow tie green","bow tie pink","bow tie purple","bow tie white","heart","mr t","normal","piano tie","short solana tie","short tie black","short tie blue","short tie green","short tie pink","short tie purple","short tie white","spikes"]
 collar_weights = [0.2,0.075,0.075,0.075,0.075,0.03,0.075,0.075,0.075,0.075,0.005,0.01,0.005,0.009,0.009,0.009,0.009,0.009,0.005,0.1]
 
-backpack = ["None","Gun","Jetpack","Rocket","SolDoge backpack"]
-backpack_file_names = ["none","futuristic gun","jetpack","rocket","soldoge backpack"]
-backpack_weights = [0.75,0.10,0.05,0.09,0.06]
+backpack = ["None","Gun grey","Jetpack","Rocket","SolDoge backpack","Gun blue","Gun yellow","Gun red","Gun purple","Gun pink","Gun orange","Gun green"]
+backpack_file_names = ["none","futuristic gun grey","jetpack","rocket","soldoge backpack","futuristic gun","futuristic gun yellow","futuristic gun red","futuristic gun purple","futuristic gun pink","futuristic gun orange","futuristic gun green"]
+backpack_weights = [0.70,0.08,0.05,0.09,0.06,0.01,0.01,0.01,0.01,0.01,0.01,0.01]
 
-headwear = ["None","Astronaut","FTX hat","Cowboy","Jason X","Kitty","Predator","Radar dish","SolDoge","Solana","Steampunk","Tin foil","Top hat","TV","Solana earphones","Cone of shame","SDoge helmet","Wizard"]
-headwear_file_names = ["none","astronaut helmet","ftx hat","howboy hat","jason x mask","kitty hat","predator mask","radar dish hat","sdoge hat","solana hat","steampunk hat","tin foil hat","top hat","tv head","big earphones","cone of shame","sdoge army helmet","wizard hat"]
-headwear_weights = [0.33,0.009995,0.045,0.09,0.09,0.09,0.09,0.09,0.0095005,0.01,0.01,0.01,0.013,0.01,0.085,0.01,0.01,0.01]
-headwear_weights_subset = [0.33,0,0.045,0.09,0,0.09,0,0.09,0.0095005,0.01,0.01,0.01,0.01,0,0.085,0.01,0.01,0.01]
+headwear = ["None","Astronaut","FTX hat","Cowboy","Jason X","Kitty","Predator","Radar dish","SolDoge","Solana","Steampunk","Tin foil","Top hat","TV","Solana earphones","Cone of shame","SDoge helmet","SDoge helmet camo","Wizard"]
+headwear_file_names = ["none","astronaut helmet","ftx hat","howboy hat","jason x mask","kitty hat","predator mask","radar dish hat","sdoge hat","solana hat","steampunk hat","tin foil hat","top hat","tv head","big earphones","cone of shame","sdoge army helmet","sdoge army helmet multicam","wizard hat"]
+headwear_weights = [0.324,0.009995,0.045,0.09,0.09,0.09,0.09,0.09,0.0095005,0.01,0.01,0.01,0.013,0.01,0.085,0.01,0.01,0.006,0.01]
+headwear_weights_subset = [0.323,0,0.045,0.09,0,0.09,0,0.09,0.0095005,0.01,0.01,0.01,0.01,0,0.085,0.01,0.01,0.007,0.01]
 
 
 if not os.path.isfile(METADATA_FILE_NAME):
@@ -329,7 +329,7 @@ else:
             collar_img = Image.open(f'./trait-layers/collar/{collar_file_names[collar.index(item["Collar"])]}.png').convert('RGBA')
 
         if item["Headwear"]!="None":
-            if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard"):
+            if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard","SDoge helmet camo"):
                 headwear_fg_img = Image.open(f'./trait-layers/headwear foreground/{headwear_file_names[headwear.index(item["Headwear"])]}.png').convert('RGBA')
                 headwear_bg_img = Image.open(f'./trait-layers/headwear background/{headwear_file_names[headwear.index(item["Headwear"])]}.png').convert('RGBA')
             else:
