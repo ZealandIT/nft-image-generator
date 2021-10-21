@@ -354,7 +354,7 @@ else:
         if item["Collar"]!="None":
             com1 = Image.alpha_composite(com1, collar_img)
 
-        if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard"):
+        if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard","SDoge helmet camo"):
             com1 = Image.alpha_composite(com1, headwear_bg_img)
 
         if item["Eyes"]!="Laser":
@@ -370,7 +370,7 @@ else:
             com1 = Image.alpha_composite(com1, eyes_img)
 
         if item["Headwear"]!="None":
-            if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard"):
+            if item["Headwear"] in ("Solana earphones","Cone of shame","SDoge helmet","Wizard","SDoge helmet camo"):
                 com1 = Image.alpha_composite(com1, headwear_fg_img)
             else:
                 com1 = Image.alpha_composite(com1, headwear_img)
