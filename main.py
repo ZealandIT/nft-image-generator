@@ -38,9 +38,9 @@ hair = ["None","Mohawk 2 Solana","Mohawk 2 yellow","Mohawk 1 Solana","Mohawk 1 y
 hair_file_names = ["none","mohawk 2 solana","mohawk 2 yellow","mohawk 1 solana","mohawk 1 yellow","matrix dreads solana","afro","liberty spike yellow","liberty spike solana","liberty spike black","liberty spike blue","liberty spike green","liberty spike pink","liberty spike purple","liberty spike white","matrix dreads","mohawk 1 black","mohawk 1 blue","mohawk 1 green","mohawk 1 pink","mohawk 1 purple","mohawk 1 white", "mohawk 2 black", "mohawk 2 blue", "mohawk 2 green", "mohawk 2 pink", "mohawk 2 purple", "mohawk 2 white"]
 hair_weights = [0.31,0.0022,0.0025,0.003,0.005,0.002,0.0004995,0.007,0.003,0.09,0.09,0.09,0.09,0.09,0.09,0.0095005,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01]
 
-clothes = ["None","Astronaut","Camo","Armor","Leather spikes","Solana tank","Tron"]
-clothes_file_names = ["none","astronaut","camou","futuristic armor","futuristic leather jacket","solana tank top","tron"]
-clothes_weights = [0.5,0.05,0.07,0.08,0.11,0.09,0.1]
+clothes = ["None","Astronaut","Camo","Armor","Leather spikes","Solana tank","Tron", "FTX"]
+clothes_file_names = ["none","astronaut","camou","futuristic armor","futuristic leather jacket","solana tank top","tron","ftx shirt"]
+clothes_weights = [0.5,0.05,0.07,0.08,0.11,0.09,0.1,0]
 
 collar = ["None","Chain","Bow-tie black","Bow-tie blue","Bow-tie green","Bow-tie pink","Bow-tie purple","Bow-tie white","Heart","Mr T","SolDoge","Piano tie","Solana tie","Black tie","Blue tie","Green tie","Pink tie","Purple tie","White tie","Spikes"]
 collar_file_names = ["none","big chain","bow tie black","bow tie blue","bow tie green","bow tie pink","bow tie purple","bow tie white","heart","mr t","normal","piano tie","short solana tie","short tie black","short tie blue","short tie green","short tie pink","short tie purple","short tie white","spikes"]
@@ -59,7 +59,7 @@ headwear_weights_subset = [0.323,0,0.045,0.09,0,0.09,0,0.09,0.0095005,0.01,0.01,
 if not os.path.isfile(METADATA_FILE_NAME):
     ## Generate Traits
 
-    TOTAL_IMAGES = 1000 # Number of random unique images we want to generate
+    TOTAL_IMAGES = 8008 # Number of random unique images we want to generate
 
     all_images = [] 
 
@@ -130,12 +130,6 @@ if not os.path.isfile(METADATA_FILE_NAME):
         print("Error: Not all images are unique.")
         exit(1)
 
-
-    # Add token Id to each image
-    i = 1
-    for item in all_images:
-        item["tokenId"] = i
-        i = i + 1
 
     print(all_images)
 
@@ -238,8 +232,6 @@ if not os.path.isfile(METADATA_FILE_NAME):
     print([key+f": {value} ({(value/TOTAL_IMAGES):.2%})" for key,value in headwear_count.items()])
 
 
-
-
     #### Generate Metadata for all Traits 
     with open(METADATA_FILE_NAME, 'w') as outfile:
         json.dump(all_images, outfile, indent=4)
@@ -251,21 +243,34 @@ else:
     f = open(METADATA_FILE_NAME,) 
     data = json.load(f)
 
+    if not all_images_unique(data):
+        print("Error: Not all images are unique.")
+        exit(1)
 
-    #IMAGES_BASE_URI = "https://www.arweave.net/"
+    # Add tokenIds
+
+    id = 0
+    for itm in data:
+        itm["tokenId"] = id
+        id = id + 1
+    
+    # write data with token ids
+    with open(METADATA_FILE_NAME, 'w') as outfile:
+        json.dump(data, outfile, indent=4)
+    
     PROJECT_NAME = "SolDoge NFT"
-    COMMUNITY_WALLET = "COMBLAHBLAH"
+    COMMUNITY_WALLET = "5orZo9fUxH975nwW6T7gReV2NTzbd2VvQHBrmXCkPPUH"
 
     def getAttribute(key, value):
         return {
             "trait_type": key,
             "value": value
         }
+    
     for i in data:
-        token_id = i['tokenId']
         token = {
-            "tokenId": token_id,
-            "name": PROJECT_NAME + ' ' + str(token_id),
+            "name": PROJECT_NAME + ' #' + str(i["tokenId"]+1),
+            "tokenId": i["tokenId"],
             "description": "SolDoge NFT - official genesis NFT for SDOGE token",
             "symbol": 'SDOGE',
             "seller_fee_basis_points": 1000,
@@ -292,17 +297,14 @@ else:
         token["attributes"].append(getAttribute("Headwear", i["Headwear"]))
         
 
-        with open('./metadata/' + str(token_id), 'w') as outfile:
+        with open('./metadata/' + str(i["tokenId"]), 'w') as outfile:
             json.dump(token, outfile, indent=4)
+        
     f.close()
 
 
     f = open(METADATA_FILE_NAME,) 
     image_metadata = json.load(f)
-
-    if not all_images_unique(image_metadata):
-        print("Error: Not all images are unique.")
-        exit(1)
 
 
     #### Generate Images    
