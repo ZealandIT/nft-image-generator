@@ -1,0 +1,542 @@
+{
+    "Background": [
+        {
+            "name": "Blue",
+            "file": "bg blue.png"
+        },
+        {
+            "name": "Cyan",
+            "file": "bg cyan.png"
+        },
+        {
+            "name": "Green",
+            "file": "bg green.png"
+        },
+        {
+            "name": "Pink",
+            "file": "bg pink.png"
+        },
+        {
+            "name": "Purple",
+            "file": "bg purple.png"
+        },
+        {
+            "name": "Solana",
+            "file": "bg solana.png"
+        }
+    ],
+    "Base": [
+        {
+            "name": "Black caramel",
+            "file": "black caramel.png"
+        },
+        {
+            "name": "Blonde",
+            "file": "blonde.png"
+        },
+        {
+            "name": "Cyborg",
+            "file": "cyborg.png"
+        },
+        {
+            "name": "Delta",
+            "file": "delta.png"
+        },
+        {
+            "name": "Gamma",
+            "file": "gamma.png"
+        },
+        {
+            "name": "Regular",
+            "file": "regular.png"
+        },
+        {
+            "name": "Steampunk",
+            "file": "steampunk.png"
+        }
+    ],
+    "Eyes": [
+        {
+            "name": "Blue",
+            "file": "regular blue.png"
+        },
+        {
+            "name": "Brown",
+            "file": "regular brown.png"
+        },
+        {
+            "name": "Pink",
+            "file": "regular pink.png"
+        },
+        {
+            "name": "Purple",
+            "file": "regular purple.png"
+        },
+        {
+            "name": "Yellow",
+            "file": "regular yellow.png"
+        },
+        {
+            "name": "Laser",
+            "file": "laser eyes.png"
+        },
+        {
+            "name": "Crosshair",
+            "file": "crosshair.png"
+        },
+        {
+            "name": "Robot",
+            "file": "robot.png"
+        },
+        {
+            "name": "Terminator",
+            "file": "terminator.png"
+        }
+    ],
+    "Mouth": [
+        {
+            "name": "Default",
+            "file": "default.png"
+        },
+        {
+            "name": "Blunt",
+            "file": "blunt.png"
+        },
+        {
+            "name": "Grills",
+            "file": "grills.png"
+        },
+        {
+            "name": "Grin",
+            "file": "grinning.png"
+        },
+        {
+            "name": "Metal growl",
+            "file": "growl metal teeth.png"
+        },
+        {
+            "name": "Growl",
+            "file": "growl.png"
+        },
+        {
+            "name": "Muzzle",
+            "file": "muzzled.png"
+        },
+        {
+            "name": "Metal open",
+            "file": "open mouth metal.png"
+        },
+        {
+            "name": "Open",
+            "file": "open mouth.png"
+        },
+        {
+            "name": "Tongue",
+            "file": "tongue out.png"
+        },
+        {
+            "name": "Growl Gold",
+            "file": "growl gold teeth.png"
+        }
+    ],
+    "EyeWear": [
+        {
+            "name": "None",
+            "file": "none.png"
+        },
+        {
+            "name": "Deal with it",
+            "file": "deal with it.png"
+        },
+        {
+            "name": "Goggles",
+            "file": "goggles.png"
+        },
+        {
+            "name": "Monocle",
+            "file": "monocle.png"
+        },
+        {
+            "name": "Nerd",
+            "file": "nerdy glasses.png"
+        },
+        {
+            "name": "Nightvision",
+            "file": "night vision.png"
+        },
+        {
+            "name": "Ovals",
+            "file": "oval glasses.png"
+        },
+        {
+            "name": "Pit vipers",
+            "file": "pit vipers.png"
+        },
+        {
+            "name": "Soldoge",
+            "file": "soldoge glasses.png"
+        },
+        {
+            "name": "Startrek",
+            "file": "star trek.png"
+        }
+    ],
+    "Hair": [
+        {
+            "name": "None",
+            "file": "none.png"
+        },
+        {
+            "name": "Mohawk 2 Solana",
+            "file": "mohawk 2 solana.png"
+        },
+        {
+            "name": "Mohawk 2 yellow",
+            "file": "mohawk 2 yellow.png"
+        },
+        {
+            "name": "Mohawk 1 Solana",
+            "file": "mohawk 1 solana.png"
+        },
+        {
+            "name": "Mohawk 1 yellow",
+            "file": "mohawk 1 yellow.png"
+        },
+        {
+            "name": "Dreads Solana",
+            "file": "matrix dreads solana.png"
+        },
+        {
+            "name": "Afro",
+            "file": "afro.png"
+        },
+        {
+            "name": "Liberty yellow",
+            "file": "liberty spike yellow.png"
+        },
+        {
+            "name": "Liberty Solana",
+            "file": "liberty spike solana.png"
+        },
+        {
+            "name": "Liberty black",
+            "file": "liberty spike black.png"
+        },
+        {
+            "name": "Liberty blue",
+            "file": "liberty spike blue.png"
+        },
+        {
+            "name": "Liberty green",
+            "file": "liberty spike green.png"
+        },
+        {
+            "name": "Liberty pink",
+            "file": "liberty spike pink.png"
+        },
+        {
+            "name": "Liberty purple",
+            "file": "liberty spike purple.png"
+        },
+        {
+            "name": "Liberty white",
+            "file": "liberty spike white.png"
+        },
+        {
+            "name": "Matrix dreads",
+            "file": "matrix dreads.png"
+        },
+        {
+            "name": "Mohawk 1 black",
+            "file": "mohawk 1 black.png"
+        },
+        {
+            "name": "Mohawk 1 blue",
+            "file": "mohawk 1 blue.png"
+        },
+        {
+            "name": "Mohawk 1 green",
+            "file": "mohawk 1 green.png"
+        },
+        {
+            "name": "Mohawk 1 pink",
+            "file": "mohawk 1 pink.png"
+        },
+        {
+            "name": "Mohawk 1 purple",
+            "file": "mohawk 1 purple.png"
+        },
+        {
+            "name": "Mohawk 1 white",
+            "file": "mohawk 1 white.png"
+        },
+        {
+            "name": "Mohawk 2 black",
+            "file": "mohawk 2 black.png"
+        },
+        {
+            "name": "Mohawk 2 blue",
+            "file": "mohawk 2 blue.png"
+        },
+        {
+            "name": "Mohawk 2 green",
+            "file": "mohawk 2 green.png"
+        },
+        {
+            "name": "Mohawk 2 pink",
+            "file": "mohawk 2 pink.png"
+        },
+        {
+            "name": "Mohawk 2 purple",
+            "file": "mohawk 2 purple.png"
+        },
+        {
+            "name": "Mohawk 2 white",
+            "file": "mohawk 2 white.png"
+        }
+    ],
+    "Clothes": [
+        {
+            "name": "None",
+            "file": "none.png"
+        },
+        {
+            "name": "Astronaut",
+            "file": "astronaut.png"
+        },
+        {
+            "name": "Camo",
+            "file": "camou.png"
+        },
+        {
+            "name": "Armor",
+            "file": "futuristic armor.png"
+        },
+        {
+            "name": "Leather spikes",
+            "file": "futuristic leather jacket.png"
+        },
+        {
+            "name": "Solana tank",
+            "file": "solana tank top.png"
+        },
+        {
+            "name": "Tron",
+            "file": "tron.png"
+        },
+        {
+            "name": "FTX",
+            "file": "ftx shirt.png"
+        }
+    ],
+    "Collar": [
+        {
+            "name": "None",
+            "file": "none.png"
+        },
+        {
+            "name": "Chain",
+            "file": "big chain.png"
+        },
+        {
+            "name": "Bow-tie black",
+            "file": "bow tie black.png"
+        },
+        {
+            "name": "Bow-tie blue",
+            "file": "bow tie blue.png"
+        },
+        {
+            "name": "Bow-tie green",
+            "file": "bow tie green.png"
+        },
+        {
+            "name": "Bow-tie pink",
+            "file": "bow tie pink.png"
+        },
+        {
+            "name": "Bow-tie purple",
+            "file": "bow tie purple.png"
+        },
+        {
+            "name": "Bow-tie white",
+            "file": "bow tie white.png"
+        },
+        {
+            "name": "Heart",
+            "file": "heart.png"
+        },
+        {
+            "name": "Mr T",
+            "file": "mr t.png"
+        },
+        {
+            "name": "SolDoge",
+            "file": "normal.png"
+        },
+        {
+            "name": "Piano tie",
+            "file": "piano tie.png"
+        },
+        {
+            "name": "Solana tie",
+            "file": "short solana tie.png"
+        },
+        {
+            "name": "Black tie",
+            "file": "short tie black.png"
+        },
+        {
+            "name": "Blue tie",
+            "file": "short tie blue.png"
+        },
+        {
+            "name": "Green tie",
+            "file": "short tie green.png"
+        },
+        {
+            "name": "Pink tie",
+            "file": "short tie pink.png"
+        },
+        {
+            "name": "Purple tie",
+            "file": "short tie purple.png"
+        },
+        {
+            "name": "White tie",
+            "file": "short tie white.png"
+        },
+        {
+            "name": "Spikes",
+            "file": "spikes.png"
+        }
+    ],
+    "Backpack": [
+        {
+            "name": "None",
+            "file": "none.png"
+        },
+        {
+            "name": "Gun grey",
+            "file": "futuristic gun grey.png"
+        },
+        {
+            "name": "Jetpack",
+            "file": "jetpack.png"
+        },
+        {
+            "name": "Rocket",
+            "file": "rocket.png"
+        },
+        {
+            "name": "SolDoge backpack",
+            "file": "soldoge backpack.png"
+        },
+        {
+            "name": "Gun blue",
+            "file": "futuristic gun.png"
+        },
+        {
+            "name": "Gun yellow",
+            "file": "futuristic gun yellow.png"
+        },
+        {
+            "name": "Gun red",
+            "file": "futuristic gun red.png"
+        },
+        {
+            "name": "Gun purple",
+            "file": "futuristic gun purple.png"
+        },
+        {
+            "name": "Gun pink",
+            "file": "futuristic gun pink.png"
+        },
+        {
+            "name": "Gun orange",
+            "file": "futuristic gun orange.png"
+        },
+        {
+            "name": "Gun green",
+            "file": "futuristic gun green.png"
+        }
+    ],
+    "Headwear": [
+        {
+            "name": "None",
+            "file": "none.png"
+        },
+        {
+            "name": "Astronaut",
+            "file": "astronaut helmet.png"
+        },
+        {
+            "name": "FTX hat",
+            "file": "ftx hat.png"
+        },
+        {
+            "name": "Cowboy",
+            "file": "howboy hat.png"
+        },
+        {
+            "name": "Jason X",
+            "file": "jason x mask.png"
+        },
+        {
+            "name": "Kitty",
+            "file": "kitty hat.png"
+        },
+        {
+            "name": "Predator",
+            "file": "predator mask.png"
+        },
+        {
+            "name": "Radar dish",
+            "file": "radar dish hat.png"
+        },
+        {
+            "name": "SolDoge",
+            "file": "sdoge hat.png"
+        },
+        {
+            "name": "Solana",
+            "file": "solana hat.png"
+        },
+        {
+            "name": "Steampunk",
+            "file": "steampunk hat.png"
+        },
+        {
+            "name": "Tin foil",
+            "file": "tin foil hat.png"
+        },
+        {
+            "name": "Top hat",
+            "file": "top hat.png"
+        },
+        {
+            "name": "TV",
+            "file": "tv head.png"
+        },
+        {
+            "name": "Solana earphones",
+            "file": "big earphones.png"
+        },
+        {
+            "name": "Cone of shame",
+            "file": "cone of shame.png"
+        },
+        {
+            "name": "SDoge helmet",
+            "file": "sdoge army helmet.png"
+        },
+        {
+            "name": "SDoge helmet camo",
+            "file": "sdoge army helmet multicam.png"
+        },
+        {
+            "name": "Wizard",
+            "file": "wizard hat.png"
+        }
+    ]
+}
